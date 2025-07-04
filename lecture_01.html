@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>AIGLUE | AI 입문 강의</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- 네비게이션 바 -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AIGLUE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">회사 소개</a></li>
+          <li class="nav-item"><a class="nav-link" href="lectures.html">강의 서비스</a></li>
+          <li class="nav-item"><a class="nav-link" href="solutions.html">솔루션 서비스</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 강의 상세 정보 -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-3 text-center">🎯 AI 입문 강의</h2>
+      <div class="row">
+        <!-- 이미지 캐러셀 -->
+        <div class="col-md-6">
+          <div id="lectureCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/lecture_01_1.jpg" alt="AI 입문 이미지 1">
+              </div>
+              <div class="carousel-item">
+                <img src="images/lecture_01_2.jpg" alt="AI 입문 이미지 2">
+              </div>
+              <div class="carousel-item">
+                <img src="images/lecture_01_3.jpg" alt="AI 입문 이미지 3">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#lectureCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">이전</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#lectureCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">다음</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 강의 설명 -->
+        <div class="col-md-6">
+          <h5 class="fw-bold">📘 강의 개요</h5>
+          <p>AI에 대한 기초 개념부터 간단한 실습까지 포함된 초급자 대상의 강의입니다. 비전공자도 이해할 수 있도록 구성되어 있으며, AI의 흐름과 기본 구조를 익힐 수 있습니다.</p>
+          <ul class="list-group list-group-flush mt-3">
+            <li class="list-group-item">🕒 <strong>강의 시간:</strong> 총 10시간 (2시간 × 5회)</li>
+            <li class="list-group-item">🎓 <strong>난이도:</strong> 초급</li>
+            <li class="list-group-item">📌 <strong>수강 전 요구사항:</strong> 없음</li>
+            <li class="list-group-item">🧩 <strong>커리큘럼 요약:</strong>
+              <ul class="mt-2">
+                <li>🤖 AI란 무엇인가?</li>
+                <li>🧠 AI 기술의 역사와 분류</li>
+                <li>🐍 기초 Python 문법</li>
+                <li>🛠️ 기본 모델 만들기 실습</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 후기 섹션 -->
+      <div class="mt-5">
+        <h5 class="fw-bold">💬 수강 후기</h5>
+        <blockquote class="blockquote">
+          <p>"AI에 대한 막연한 두려움을 없애주는 좋은 입문 강의였습니다. 설명이 정말 쉽게 되어 있어 좋았어요!"</p>
+          <footer class="blockquote-footer">홍길동, 예비 창업자</footer>
+        </blockquote>
+      </div>
+
+      <!-- 버튼 -->
+      <div class="text-center mt-4 d-flex justify-content-center gap-3 flex-wrap">
+        <a href="lectures.html" class="btn btn-secondary">🔙 강의 목록으로 돌아가기</a>
+        <a href="contact.html?item=lecture_01" class="btn btn-primary">📩 강의 문의하기</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>&copy; 2025 AIGLUE Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

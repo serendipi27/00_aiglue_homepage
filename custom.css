@@ -54,3 +54,15 @@ footer {
   color: white;
   padding: 30px 0;
 }
+
+/* lecture_01 이미지 스타일 */
+.carousel-item {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    background-color: #000;
+}
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

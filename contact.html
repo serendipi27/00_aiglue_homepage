@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>AIGLUE | 문의하기</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+  <link href="custom.css" rel="stylesheet">
+  <style>
+    #itemInfo {
+      background-color: #f1f1f1;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 네비게이션 바 -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">AIGLUE</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">홈</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">회사 소개</a></li>
+          <li class="nav-item"><a class="nav-link" href="lectures.html">강의 서비스</a></li>
+          <li class="nav-item"><a class="nav-link" href="solutions.html">솔루션 서비스</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contact.html">문의하기</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 문의 섹션 -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="fw-bold mb-4 text-center">📩 문의하기</h2>
+
+      <!-- 강의 정보 자동 표시 영역 -->
+      <div id="itemInfo">
+        <strong>※ 문의할 주제:</strong> <span id="itemTitle"> 어차피 대체될 것임 </span>
+      </div>
+
+      <!-- 문의 폼 -->
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">이름</label>
+          <input type="text" class="form-control" id="name" placeholder="홍길동">
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">이메일</label>
+          <input type="email" class="form-control" id="email" placeholder="email@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">문의 내용</label>
+          <textarea class="form-control" id="message" rows="6" placeholder="궁금하신 내용을 남겨주세요."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">문의 보내기</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- 푸터 -->
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p>&copy; 2025 AIGLUE Inc. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS + Lecture 자동 표시 스크립트 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // URL 파라미터 확인 후 강의명 자동 표시
+    const urlParams = new URLSearchParams(window.location.search);
+    const itemCode = urlParams.get("item");
+
+    const itemMap = {
+      "lecture_01": "AI 입문 강의",
+      "lecture_02": "파이썬 데이터 분석",
+      "lecture_03": "머신러닝 실습",
+      "lecture_04": "딥러닝 기본기",
+      "lecture_05": "ChatGPT API 활용",
+      "lecture_06": "AI 프로젝트 실전",
+      "solution_01": "공공데이터 품질 분석 솔루션"
+    };
+
+    if (itemCode && itemMap[itemCode]) {
+      document.getElementById("itemInfo").style.display = "block";
+      document.getElementById("itemTitle").innerText = itemMap[itemCode];
+    }
+  </script>
+
+</body>
+</html>
